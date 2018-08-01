@@ -43,4 +43,4 @@ If you want to write your own comment you can just select some existing text and
 
 After you have contributed to the manuscript you should add yourself to the authorlist! It's up in the first lines of the document. Besides your name you might want to leave an affiliation.
 
-(and if you're an academic you might want to leave a comment with your ORCID too!)
+(and if you're [having an ORCID](https://orcid.org/) you might want to leave a comment with it to your name!)
