@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Please note that whilst this template provides a 
+% preview of the typeset manuscript for submission, it 
+% will not necessarily be the final publication layout.
+%
+% letterpaper/a4paper: US/UK paper size toggle
+% num-refs/alpha-refs: numeric/author-year citation and bibliography toggle
+
+%\documentclass[letterpaper]{oup-contemporary}
+\documentclass[a4paper,num-refs]{oup-contemporary}
+
+%%% Journal toggle; only specific options recognised.
+%%% (Only "gigascience" and "general" are implemented now. Support for other journals is planned.)
+\journal{gigascience}
+
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+%%% Flushend: You can add this package to automatically balance the final page, but if things go awry (e.g. section contents appearing out-of-order or entire blocks or paragraphs are coloured), remove it!
+% \usepackage{flushend}
+
+\title{Open Humans: A platform for participant-centered research and personal data exploration}
+
+%%% Use the \authfn to add symbols for additional footnotes, if any. 1 is reserved for correspondence emails; then continuing with 2 etc for contributions.
+\author[1, 2,\authfn{1}]{Bastian Greshake Tzovaras}
+\author[4]{Second Author}
+\author[3]{Jason Bobe}
+\author[1,\authfn{1}]{Mad Price Ball}
+
+\affil[1]{Open Humans Foundation, USA}
+\affil[2]{Lawrence Berkeley National Laboratory, Berkeley, CA, USA}
+\affil[3]{Mount Sinai School of Medicine, NY, USA}
+\affil[4]{Second Author Affiliation}
+
+%%% Author Notes
+\authnote{\authfn{1}bgreshake@gmail.com; mad@openhumans.org}
+
+%%% Paper category
+\papercat{Paper}
+
+%%% "Short" author for running page header
+\runningauthor{Greshake Tzovaras et al.}
+
+%%% Should only be set by an editor
+\jvolume{00}
+\jnumber{0}
+\jyear{2017}
+
+\begin{document}
+
+\begin{frontmatter}
+\maketitle
+\begin{abstract}
+The Abstract (250 words maximum) should be structured to include the following details: \textbf{Background}, the context and purpose of the study; \textbf{Results}, the main findings; \textbf{Conclusions}, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
+\end{abstract}
+
+\begin{keywords}
+Personal Data; Crowdsourcing; Citizen Science; Database; Open Data 
+\end{keywords}
+\end{frontmatter}
+
+%%% Key points will be printed at top of second page
+\begin{keypoints*}
+\begin{itemize}
+\item This is the first point
+\item This is the second point
+\item One last point.
+\end{itemize}
+\end{keypoints*}
+
+
+\section{Background}
+\label{sec:background}
+Biomedical research, as well as medicine, are experiencing an age full of changes: Personalized medicine - which takes behavioral, environmental and genetic factors into account - has become the vision for health-care in the United States \cite{Collins2015}. By taking these parameters into account, personalized medicine mains to optimize health-outcomes for individual patients, for example by matching drugs to a patient's genetic makeup \cite{Chhibber2014, Kummar2015}.
+
+The availability of large-scale data sets is one of the central preconditions for personalized medicine to succeed \cite{Kohane2015}, along with an availability of appropriate methods to analyze these data \cite{Dilsizian2013, Moon2007}. Dropping costs for large-scale, personalized analyses such as whole-genome sequencing \cite{wetterstrand} help facilitate both research of personalized medicine and its adoption. In addition, patients and healthy individuals are more and more keeping track of health-related data, for example through wearable devices \cite{Swan2009} that produce data useful for research \cite{Gay2015} or through direct-to-consumer (DTC) genetic testing \cite{Corpas2015}.
+
+Indeed, already over 7 million individuals have taken a DTC genetic test \cite{growthancestry} and it is estimated that by 2020 over 2,314 exabytes of storage will be needed for health care data \cite{emc} alone. Furthermore, data from social network sites like Facebook or Twitter are becoming more and more interesting for medical data mining \cite{Rozenblum2013}.
+
+These changes to research and medical practice bring with them a number of challenges that need to be solved, including the problems of data silos, ethical data sharing and participant-involvement.
+
+\subsection{Data Silos}
+To fully realize the promises of personalized medicine and make use of all data, research needs access to big data and the ability to tap into a variety of data streams and link these data \cite{Weber2014, Kohane2015}. Data silos can hinder the merging of data for a number of reasons: Data silos can be incompatible due to different data licenses \cite{Carbon2018} or inaccessible for privacy and ethical concerns \cite{Blasimme2018, Kossmann2014, Tenopir2011}. 
+
+Furthermore, in case of wearable devices, social media and other data held by companies, data exports are not offered for commercial reasons. In the European Union, the issue of data portability has been addressed by the \emph{General Data Protection Regulation} (GDPR), which strengthens an individuals right to obtain copies of all of their data \cite{DeHert2018}. An individuals right to copies of their data, empowers them to be a key data holder for personalized medicine frameworks. 
+
+\subsection{Ethical Data Re-Use}
+Social media websites is gaining importance for biomedical research as well as public health \cite{Samerski2018}. An extreme example of this can be a "study" performed on 70,000 users of the online dating website which subsequently publicly shared the personal data of these users \cite{okcupid}. Such cases has lead to lively debate about the ethics of using data which is publicly available on websites as Facebook \cite{Zimmer2010, Zook2017}. 
+
+These ethical considerations become even more important when performing experiments with users of social media. An early example of this was the emotional contagion experiment performed on Facebook users. Together with academic collaborators, Facebook performed psychological experiments on 700,000 of its users without their consent, raising further ethical concerns \cite{Jouhki2016, Hunter2016, Flick2015}. 
+
+While there is no consensus on how research consent for existing personal data should be performed, participants have a wish to consent and control their data \cite{Golder2017}. Putting participants into control of their data will be more central in the more sensitive context of personalized medicine \cite{Kossmann2014}.
+
+
+\subsection{Participant Involvement}
+There is a growing movement for more participant/patient involvement in biomedical research as it is recognized that especially patients often have a better understanding of their disease and needs than medical/research professionals \cite{Mader2018, Vayena2015}. Examples include the studies on amyotrophic lateral sclerosis initiated by \textit{PatientsLikeMe} users \cite{Wicks2011}, crowd-sourcing efforts like \textit{AmericanGut} [citation needed] and a variety of other \textit{citizen genomics} efforts \cite{McGowan2017}.
+
+The \textit{Quantified Self} movement, in which individuals perform self-tracking of biological, behavioral or environmental information and design experiments with an \textit{n=1} to learn about themselves \cite{Swan2013}, can be seen in this continuum of participant-led research \cite{Swan2012}. By performing self-experiments and recording their own data, individuals are gaining critical knowledge about themselves and with designing their own studies.
+
+\subsection{A participant-centered approach to research}
+As shown above, involving patients and generally participants early on in a research project has multiple benefits. Participants as primary data holder can help in breaking down walls between data silos and aggregate/share their personal data streams. Furthermore, by being involved in the research process and actively providing data, they gain autonomy and can actively consent to their data being used - thus minimizing the ethical grey area. Last, but not least, active research participants can give valuable input from their perspectives, leading to better research.
+
+Over the last years a number of projects have started to explore both data donations and crowd-sourcing research with an extended involvement of participants. In the fields of genomics, both academic projects like \textit{DNA.Land} \cite{Yuan2018} and community-driven projects like \textit{openSNP} \cite{Greshake2014} are enabling a crowdsourcing of personal genetic data sets. Furthermore, the idea of \textit{Health Data Cooperatives} that are communally run to manage access to health data has sprung up \cite{Kossmann2014}. [ADD ADDITIONAL EXAMPLES!] 
+
+Most of these projects limit participants' involvement in the research process though: Mostly participants are only provide data that is put into a data repository. Furthermore, most of these projects are not designed to effectively bundle different data streams, but focus on a specific kind of data. Additionally, participants are still rarely given an easy way to help in designing a study or even running their own one. 
+
+To close these gaps we present \textit{Open Humans}, a community-based platform that enables its members to share a growing number of personal data types; participate in research projects and create their own; and facilitates the exploration of personal data for the individual member. Along with platform itself, we present a set of examples on how the platform is already used for academic \& participant-lead research projects.
+
+\section{Results}
+We designed \textit{Open Humans} as a web application with the goal of easily enabling connections to existing and newly created data sources and data (re-)using applications. In the center of the design are three main components: \textit{Members}, \textit{Projects} and \textit{Data objects}. The general workflow is that \textit{Members} join a \textit{Project} and authorize it to read or write \textit{Data objects} from this \textit{Member}. 
+
+\subsection{Design}
+\subsubsection{Projects}
+Projects are the main way for \textit{Members} to interact with \textit{Open Humans}. As projects can be created by any member, they are not limited to academic research projects but open to participant-lead projects too. During the project creation a prospective project lead can not only give a description of their project, but also specify the access permissions they want to request from members that decide to join a given project: 
+\begin{description}
+\item [Username] By default projects do not get access to a members username, rather a random, unique identifier is created. This way members can join a project while being pseudonymous. 
+\item [Messaging] Decides whether a project lead gets the ability to send messages to a member. 
+\item [Data Access] A project can ask permission to read data that have been deposited into a member's account by other projects. A project leads needs to specify to which existing projects they want to have access to and only this data will be shared with the new project.
+\end{description}
+
+Through the permission system members get a clear idea of the amount of data they are sharing by joining a given project and whether their identity will be shared. Furthermore, new data can be deposited into the accounts of members that have joined a project. This makes them also central to getting data into a member account.
+
+\textit{Projects} can be set up in two different ways: As an \textit{on-site project} or as an \textit{OAuth2 project}. While on-site projects do not need any additional resources on the side of the project, access to the data shared with it can not easily be automated and requires manual interactions.
+
+OAuth2 projects on the other hand require a larger effort to implement the \textit{OAuth2} authentication methods. In return they offer programmatic access to the shared data, making it well-suited for connecting to other web or smartphone applications.
+
+Given this very broad classification of a \textit{project}, they can cover anything from data import projects, over research projects, to quantified self tools which visualize and analyze a members data. 
+
+\subsubsection{Members}
+Members interact with projects that are run on \textit{Open Humans}. By joining projects that deposit specific data into their accounts they can connect external services and e.g. put their genetic data or activity tracking data into their \textit{Open Humans} account. Once they have connected to relevant projects that import their own data, members can opt-in into joining further projects that want to get access to their personal data.
+
+As members are able to selectively join projects, they keep full control over how much of their data files they want to share and with which projects. 
+
+\subsubsection{Data}
+Data is uploaded into a members account projects. To be fully universal to all the possible projects that can be run on \textit{Open Humans}, all data is stored as files. For each file deposited into a members account, the uploading project needs to specify at least a description and tags as meta data. 
+
+Members can always review and access the data stored in their own accounts, but by default the data uploaded into their accounts is not shared with other projects but the one that deposited the data in their account. In addition to being able to share data with other projects, members can also opt-in into making the data of individual projects publicly available. Data that has been publicly shared is then discoverable on a member's user profile as well as through the \textit{Open Humans} Public Data API. 
+
+\subsection{Open Humans in Practice}
+Using this design, a number of projects that import data into \textit{Open Humans} are provided directly by \textit{Open Humans}. Among data sources that can be imported and connected are \textit{23andMe}, \textit{AncestryDNA}, \textit{Fitbit}, \textit{Runkeeper}, \textit{Withings}, \textit{uBiome} and a generic \textit{VCF} importer for genetic data like whole exome or genome sequencing. Furthermore, as a special category the \textit{Data Selfie} project allows members to add additional data files that are not supported by a specialized project yet.
+
+The community around the \textit{Open Humans} platform has since started their own data import and connection projects, including a bridge to \textit{openSNP}, and importers for data from \textit{FamilyTreeDNA}, \textit{Apple Healthkit}, \textit{Gencove}, \textit{Twitter} and \textit{Nightscout} community. Across these data importers the platform supports data sources covering genetic and activity tracking data as well as data from glucose monitors and social media.
+
+The platform has significantly grown since its launch in 2015: As of July 31st 2018, a total of 5,834 members have signed up with \textit{Open Humans} and have loaded 15,522 data sets into their accounts. Furthermore, overall there are 27 projects that are actively running on Open Humans, with an additional 10 projects that have already finished their data collection and have been concluded.
+
+\subsection{Use Cases}
+To demonstrate the range of projects made possible through the platform and how the community improves the ecosystem that is growing around \textit{Open Humans} we highlight some of the existing projects, covering both participant-lead as well as academic research and the quantified self community.
+
+\subsubsection{Personal Data Exploration}
+Explore data stored in OH in notebooks 
+
+\section{Discussion}
+
+\begin{itemize}
+    \item How does OH solve the issues presented in the intro? relate to how individual use case examples do it
+    \item what are the limitations? (who participates? how many ppl are actually having enough data to merge data streams from different sources? how to keep up API connections?) 
+    \item Future outlook: what'll need to be solved going on from here? (e.g. community ownership through project approvals, board seats? governance at large?) 
+\end{itemize}
+
+
+\section{Methods}
+
+We developed the \textit{Open Humans} web application using \textit{Python} and \textit{Django}. A \textit{PostgreSQL} database serves as the main storage back end for the data relating to members and projects. As a file storage for the personal data deposited into member accounts we use \textit{Amazon S3}. 
+
+\subsection{API interface}
+
+
+\section{Availability of source code and requirements (optional, if code is present)}
+
+Lists the following:
+\begin{itemize}
+\item Project name: Open Humans
+\item Project home page: \url{http://www.openhumans.org}
+\item Operating system(s): Platform independent
+\item Programming language: Python
+\item Other requirements: full list on GitHub \url{https://github.com/openhumans/open-humans/}
+\item License: MIT
+\end{itemize}
+
+\section{Availability of supporting data and materials}
+
+\textit{GigaScience} requires authors to deposit the data set(s) supporting the results reported in submitted manuscripts in a publicly-accessible data repository such as \href{http://gigadb.org/}{\textit{Giga}DB} (see \textit{Giga}DB database terms of use for complete details). This section should be included when supporting data are available and must include the name of the repository and the permanent identifier or accession number and persistent hyperlinks for the data sets (if appropriate). The following format is recommended:
+
+``The data set(s) supporting the results of this article is(are) available in the [repository name] repository, [cite unique persistent identifier].''
+
+Following the \href{https://www.force11.org/group/joint-declaration-data-citation-principles-final}{Joint Declaration of Data Citation Principles}, where appropriate we ask that the data sets be cited where it is first mentioned in the manuscript, and included in the reference list. If a DOI has been issued to a dataset please always cite it using the DOI rather than the less stable URL the DOI resolves to (e.g.~\url{http://dx.doi.org/10.5524/100044} rather than \url{http://gigadb.org/dataset/100044}). For more see:
+
+Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 [\url{https://www.force11.org/datacitation}]
+
+A list of available scientific research data repositories can be found in \href{http://www.re3data.org/}{res3data} and \href{https://biosharing.org/}{BioSharing}.
+
+\section{Declarations}
+
+\subsection{List of abbreviations}
+If abbreviations are used in the text they should be defined in the text at first use, and a list of abbreviations should be provided in alphabetical order.
+
+\subsection{Ethical Approval}
+
+Not applicable
+
+\subsection{Consent for publication}
+Not applicable
+
+\subsection{Competing Interests}
+
+BGT and MPB are employees of the \textit{Open Humans Foundation} that runs \textit{Open Humans}.
+
+
+\subsection{Funding}
+
+All sources of funding for the research reported should be declared. The role of the funding body in the design of the study and collection, analysis, and interpretation of data and in writing the manuscript should be declared. Please use \href{http://www.crossref.org/fundingdata/}{FundRef} to report funding sources and include the award/grant number, and the name of the Principal Investigator of the grant. 
+
+
+\subsection{Author's Contributions}
+
+The individual contributions of authors to the manuscript should be specified in this section. Guidance and criteria for authorship can be found in our \href{https://academic.oup.com/gigascience/pages/editorial_policies_and_reporting_standards}{editorial policies}. We would recommend you follow some kind of standardised taxonomy like the \href{http://docs.casrai.org/CRediT}{CASRAI CRediT} (Contributor Roles Taxonomy).
+
+
+\section{Acknowledgements}
+
+Please acknowledge anyone who contributed towards the article who does not meet the criteria for authorship including anyone who provided professional writing services or materials.
+
+Authors should obtain permission to acknowledge from all those mentioned in the Acknowledgements section. If you do not have anyone to acknowledge, please write ``Not applicable'' in this section.
+
+See our \href{https://academic.oup.com/gigascience/pages/editorial_policies_and_reporting_standards}{editorial policies} for a full explanation of acknowledgements and authorship criteria.
+
+Group authorship: if you would like the names of the individual members of a collaboration group to be searchable through their individual PubMed records, please ensure that the title of the collaboration group is included on the title page and in the submission system and also include collaborating author names as the last paragraph of the “Acknowledgements” section. Please add authors in the format First Name, Middle initial(s) (optional), Last Name. You can add institution or country information for each author if you wish, but this should be consistent across all authors.
+
+Please note that individual names may not be present in the PubMed record at the time a published article is initially included in PubMed as it takes PubMed additional time to code this information.
+
+\section{Authors' information (optional)}
+
+You may choose to use this section to include any relevant information about the author(s) that may aid the reader's interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors' qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.
+
+
+
+%% Specify your .bib file name here, without the extension
+\bibliography{paper-refs}
+
+
+\end{document}
