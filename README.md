@@ -19,7 +19,7 @@ Find some guidelines on how Overleaf works below.
 
 ![](img/editing.png)
 
-When you are logged in into *Overleaf* you should see a site that looks above. On the left-hand side of the window you can see the raw *LaTeX* text/code for the writing. You can start writing in here right away.
+When you are logged in into *Overleaf* you should see a site that looks like above. On the left-hand side of the window you can see the raw *LaTeX* text/code for the writing. You can start writing in there right away!
 On the right-hand side you see the compiled *LaTeX* document as a preview how the final document would look like.
 
 By default the right-hand side might not update automatically. To change this click on the arrow on the *Recompile* button and enable this feature. Don't worry about making changes to the text of the left, as the changes are easily tracked.
@@ -39,7 +39,7 @@ If you want to write your own comment you can just select some existing text and
 
 ## Adding yourself as an author
 
-![](img/authorsh.png)
+![](img/authorship.png)
 
 After you have contributed to the manuscript you should add yourself to the authorlist! It's up in the first lines of the document. Besides your name you might want to leave an affiliation.
 
