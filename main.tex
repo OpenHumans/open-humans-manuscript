@@ -23,14 +23,18 @@
 
 %%% Use the \authfn to add symbols for additional footnotes, if any. 1 is reserved for correspondence emails; then continuing with 2 etc for contributions.
 \author[1, 2,\authfn{1}]{Bastian Greshake Tzovaras}
-\author[4]{Second Author}
+\author[5]{Tim Head}
+\author[4]{Dana Lewis}
+\author[6]{Another Author}
 \author[3]{Jason Bobe}
 \author[1,\authfn{1}]{Mad Price Ball}
 
 \affil[1]{Open Humans Foundation, USA}
 \affil[2]{Lawrence Berkeley National Laboratory, Berkeley, CA, USA}
 \affil[3]{Mount Sinai School of Medicine, NY, USA}
-\affil[4]{Second Author Affiliation}
+\affil[4]{OpenAPS, Seattle, WA, USA}
+\affil[5]{Wild Tree Tech, Switzerland}
+\affil[6]{Second Author Affiliation}
 
 %%% Author Notes
 \authnote{\authfn{1}bgreshake@gmail.com; mad@openhumans.org}
@@ -51,6 +55,9 @@
 \begin{frontmatter}
 \maketitle
 \begin{abstract}
+Instructions on how to contribute can be found at \url{http://openhumansfoundation.org/open-humans-manuscript/}
+
+
 The Abstract (250 words maximum) should be structured to include the following details: \textbf{Background}, the context and purpose of the study; \textbf{Results}, the main findings; \textbf{Conclusions}, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
 \end{abstract}
 
@@ -71,87 +78,125 @@ Personal Data; Crowdsourcing; Citizen Science; Database; Open Data
 
 \section{Background}
 \label{sec:background}
-Biomedical research, as well as medicine, are experiencing an age full of changes: Personalized medicine - which takes behavioral, environmental and genetic factors into account - has become the vision for health-care in the United States \cite{Collins2015}. By taking these parameters into account, personalized medicine mains to optimize health-outcomes for individual patients, for example by matching drugs to a patient's genetic makeup \cite{Chhibber2014, Kummar2015}.
+Human subject research at large, from biomedical \& health research to the social sciences, are experiencing rapid changes. The rise of electronic records, online platforms and increasingly wearable devices contributes to a sense that these collected data can change how research in these fields is performed \cite{McCormick2015, zdemir2015, Athey2017, Cappella2017}
 
-The availability of large-scale data sets is one of the central preconditions for personalized medicine to succeed \cite{Kohane2015}, along with an availability of appropriate methods to analyze these data \cite{Dilsizian2013, Moon2007}. Dropping costs for large-scale, personalized analyses such as whole-genome sequencing \cite{wetterstrand} help facilitate both research of personalized medicine and its adoption. In addition, patients and healthy individuals are more and more keeping track of health-related data, for example through wearable devices \cite{Swan2009} that produce data useful for research \cite{Gay2015} or through direct-to-consumer (DTC) genetic testing \cite{Corpas2015}.
+Among the impacted disciplines is personalized medicine - which takes behavioral, environmental and genetic factors into account and has become the vision for health-care in the United States \cite{Collins2015}. By taking these parameters into account, personalized medicine mains to optimize health-outcomes for individual patients, for example by matching drugs to a patient's genetic makeup \cite{Chhibber2014, Kummar2015}.
 
-Indeed, already over 7 million individuals have taken a DTC genetic test \cite{growthancestry} and it is estimated that by 2020 over 2,314 exabytes of storage will be needed for health care data \cite{emc} alone. Furthermore, data from social network sites like Facebook or Twitter are becoming more and more interesting for medical data mining \cite{Rozenblum2013}.
+Access to large-scale data sets, along with an availability of appropriate methods to analyze these data \cite{Dilsizian2013, Moon2007}, is often described as one big driver for the success of personalized medicine \cite{Kohane2015}. Dropping costs for large-scale, personalized analyses such as whole-genome sequencing \cite{wetterstrand} help facilitate both research of personalized medicine and its adoption. In addition, an increasing number of patients and healthy individuals are collecting health-related data outside traditional healthcare, for example through wearable devices \cite{Swan2009} that produce data useful for research \cite{Gay2015} or through direct-to-consumer (DTC) genetic testing \cite{Corpas2015}.
+
+Indeed, already over 7 million individuals have taken a DTC genetic test \cite{growthancestry} and it is estimated that by 2020 over 2,314 exabytes of storage will be needed for health care data \cite{emc} alone. Furthermore, data from social network sites like Facebook or Twitter are becoming more and more interesting for medical data mining \cite{Rozenblum2013}. Additionally, more data is becoming available from personal medical devices, both in real-time and for retrospective analysis. 
 
 These changes to research and medical practice bring with them a number of challenges that need to be solved, including the problems of data silos, ethical data sharing and participant-involvement.
 
 \subsection{Data Silos}
-To fully realize the promises of personalized medicine and make use of all data, research needs access to big data and the ability to tap into a variety of data streams and link these data \cite{Weber2014, Kohane2015}. Data silos can hinder the merging of data for a number of reasons: Data silos can be incompatible due to different data licenses \cite{Carbon2018} or inaccessible for privacy and ethical concerns \cite{Blasimme2018, Kossmann2014, Tenopir2011}. 
+To fully realize the promises of these large personal data collections, not only in personalized medicine but all fields of research, access to both big data and smaller data sources, as well as the ability to tap into a variety of data streams and link these data are needed \cite{Weber2014, Kohane2015}. Data silos can hinder the merging of data for a number of reasons: Data silos can be incompatible due to different data licenses \cite{Carbon2018} or inaccessible for privacy and ethical concerns \cite{Blasimme2018, Kossmann2014, Tenopir2011}. 
 
-Furthermore, in case of wearable devices, social media and other data held by companies, data exports are not offered for commercial reasons. In the European Union, the issue of data portability has been addressed by the \emph{General Data Protection Regulation} (GDPR), which strengthens an individuals right to obtain copies of all of their data \cite{DeHert2018}. An individuals right to copies of their data, empowers them to be a key data holder for personalized medicine frameworks. 
+Furthermore, in case of wearable devices, social media and other data held by companies, data exports are not offered for commercial reasons. In the European Union, the issue of data portability has been addressed by the \emph{General Data Protection Regulation} (GDPR), which strengthens an individuals right to obtain copies of all of their data \cite{DeHert2018}. An individual's right to copies of their data, empowers them to be a key data holder for personalized medicine frameworks. 
 
 \subsection{Ethical Data Re-Use}
-Social media websites is gaining importance for biomedical research as well as public health \cite{Samerski2018}. An extreme example of this can be a "study" performed on 70,000 users of the online dating website which subsequently publicly shared the personal data of these users \cite{okcupid}. Such cases has lead to lively debate about the ethics of using data which is publicly available on websites as Facebook \cite{Zimmer2010, Zook2017}. 
+While the sharing and re-using of biomedical data offers can potentially transform medical care and medical research, it brings along a number of ethical considerations \cite{Mason2017, Ross2018}. In the field of human genetics, the ethics of sharing data has extensive been evaluated with respects to how research participants and patients can give informed consent with respects to genetic discrimination, loss of privacy and the risks of re-identification in publicly shared data \cite{Haeusermann2017, Wang2016}.
 
-These ethical considerations become even more important when performing experiments with users of social media. An early example of this was the emotional contagion experiment performed on Facebook users. Together with academic collaborators, Facebook performed psychological experiments on 700,000 of its users without their consent, raising further ethical concerns \cite{Jouhki2016, Hunter2016, Flick2015}. 
+Furthermore, as social media websites are gaining importance in research as well as public health \cite{Samerski2018}, ethical data usage considerations are gaining importance. An extreme example of ethical problems  can be seen in a "study" performed on 70,000 users of the online dating website which subsequently publicly shared the personal data of these users \cite{okcupid}. Such cases has lead to lively debate about the ethics of using data which is publicly available on websites as Facebook \cite{Zimmer2010, Zook2017}. 
 
-While there is no consensus on how research consent for existing personal data should be performed, participants have a wish to consent and control their data \cite{Golder2017}. Putting participants into control of their data will be more central in the more sensitive context of personalized medicine \cite{Kossmann2014}.
+These ethical considerations become even more important when performing experiments with users of social media and other online platforms. For example, Facebook performed an experiment to study emotional contagion on 700,000 of its users without their consent or debriefing, prompting discussion of the ethics of unregulated human subjects research and "A/B testing" by private entities \cite{Jouhki2016, Hunter2016, Flick2015}. At the same time, the Cambridge Analytica controversy has led Facebook to tighten control over their API, turning it even more into a silo that does not allow for legitimate research being done by academic researchers \cite{facebook_silo}.
+
+For the foreseeable future, research that re-uses data from commercial interests will have to decide how to balance the interests of commercial data sources and data subjects. While there is no consensus on how research consent for existing personal data should be performed, participants have a wish to consent and control their data \cite{Golder2017}. Putting participants into control of their data will be more central in the more sensitive context of personalized medicine \cite{Kossmann2014}.
 
 
 \subsection{Participant Involvement}
-There is a growing movement for more participant/patient involvement in biomedical research as it is recognized that especially patients often have a better understanding of their disease and needs than medical/research professionals \cite{Mader2018, Vayena2015}. Examples include the studies on amyotrophic lateral sclerosis initiated by \textit{PatientsLikeMe} users \cite{Wicks2011}, crowd-sourcing efforts like \textit{AmericanGut} [citation needed] and a variety of other \textit{citizen genomics} efforts \cite{McGowan2017}.
+Citizen science mostly describes the involvements of volunteers in the data collection, analysis and interpretation phases of research projects \cite{Pocock2017}, thus both supporting the research process itself and helping with public engagement. Along with these reasons to actively involve volunteers, there is a case to be made to see participatory science included in the Humans Right for Science \cite{Vayena2015a}. 
+
+Traditionally, many participatory science projects focused on the natural sciences, like natural resource management, environmental monitoring/protection, and astrophysics \cite{McKinley2017, Conrad2010, Zevin2017}. In many of these examples volunteers are asked to crowd-source and support scientists in the collection of data - e.g. by field observations or through sensors \cite{Haklay2012} or to perform human computation tasks, e.g. to classify images \cite{Dickinson2018} or to generate protein-structure foldings \cite{Khatib2011}. 
+
+Analogous to the movement in other fields, there is a growing movement for more participant/patient involvement in human subject research, including fields such as radiology, public health, psychology and epidemiology \cite{Ranard2013, Rowbotham2017}. It furthermore has been recognized that especially patients often have a better understanding of their disease and needs than medical/research professionals \cite{Mader2018, Vayena2015} and that patient-involvement can help catalyzing policy interventions \cite{Katapally2018}. Examples include the studies on amyotrophic lateral sclerosis initiated by \textit{PatientsLikeMe} users \cite{Wicks2011}, crowd-sourcing efforts like \textit{American Gut} \cite{McDonald2018} and a variety of other \textit{citizen genomics} efforts \cite{McGowan2017}.
 
 The \textit{Quantified Self} movement, in which individuals perform self-tracking of biological, behavioral or environmental information and design experiments with an \textit{n=1} to learn about themselves \cite{Swan2013}, can be seen in this continuum of participant-led research \cite{Swan2012}. By performing self-experiments and recording their own data, individuals are gaining critical knowledge about themselves and with designing their own studies.
 
 \subsection{A participant-centered approach to research}
 As shown above, involving patients and generally participants early on in a research project has multiple benefits. Participants as primary data holder can help in breaking down walls between data silos and aggregate/share their personal data streams. Furthermore, by being involved in the research process and actively providing data, they gain autonomy and can actively consent to their data being used - thus minimizing the ethical grey area. Last, but not least, active research participants can give valuable input from their perspectives, leading to better research.
 
-Over the last years a number of projects have started to explore both data donations and crowd-sourcing research with an extended involvement of participants. In the fields of genomics, both academic projects like \textit{DNA.Land} \cite{Yuan2018} and community-driven projects like \textit{openSNP} \cite{Greshake2014} are enabling a crowdsourcing of personal genetic data sets. Furthermore, the idea of \textit{Health Data Cooperatives} that are communally run to manage access to health data has sprung up \cite{Kossmann2014}. [ADD ADDITIONAL EXAMPLES!] 
+Over the last years a number of projects have started to explore both data donations and crowd-sourcing research with an extended involvement of participants. In the fields of genomics, both academic projects like \textit{DNA.Land} \cite{Yuan2018} and community-driven projects like \textit{openSNP} \cite{Greshake2014} are enabling a crowdsourcing of personal genetic data sets. Furthermore, the idea of \textit{Health Data Cooperatives} that are communally run to manage access to health data has sprung up \cite{Kossmann2014}.
 
 Most of these projects limit participants' involvement in the research process though: Mostly participants are only provide data that is put into a data repository. Furthermore, most of these projects are not designed to effectively bundle different data streams, but focus on a specific kind of data. Additionally, participants are still rarely given an easy way to help in designing a study or even running their own one. 
 
-To close these gaps we present \textit{Open Humans}, a community-based platform that enables its members to share a growing number of personal data types; participate in research projects and create their own; and facilitates the exploration of personal data for the individual member. Along with platform itself, we present a set of examples on how the platform is already used for academic \& participant-lead research projects.
+To close these gaps we developed \textit{Open Humans}, a community-based platform that enables its members to share a growing number of personal data types; participate in research projects and create their own; and facilitates the exploration of personal data for the individual member. Along with platform itself, we present a set of examples on how the platform is already used for academic \& participant-lead research projects, as well as creates opportunity for collaboration between traditional academic and citizen scientist researchers.
 
 \section{Results}
-We designed \textit{Open Humans} as a web application with the goal of easily enabling connections to existing and newly created data sources and data (re-)using applications. In the center of the design are three main components: \textit{Members}, \textit{Projects} and \textit{Data objects}. The general workflow is that \textit{Members} join a \textit{Project} and authorize it to read or write \textit{Data objects} from this \textit{Member}. 
+We designed \textit{Open Humans} as a web platform with the goal of easily enabling connections to existing and newly created data sources and data (re-)using applications. The goal of the platform is to enable members to import data into their accounts from various sources and use the data to explore it on their own and share it with citizen science and academic research projects alike.
+
 
 \subsection{Design}
+In the center of the design are three main components: \textit{Members}, \textit{Projects} and \textit{Data objects}. \textit{Members} can join various \textit{Projects} and authorize them to read data that's stored in their account as well as write new \textit{Data objects} from this \textit{Member}. 
+
+
 \subsubsection{Projects}
-Projects are the main way for \textit{Members} to interact with \textit{Open Humans}. As projects can be created by any member, they are not limited to academic research projects but open to participant-lead projects too. During the project creation a prospective project lead can not only give a description of their project, but also specify the access permissions they want to request from members that decide to join a given project: 
+Projects are the main way for \textit{Members} to interact with \textit{Open Humans}. As projects can be created by any member, they are not limited to academic research projects but open to participant-lead projects too. During the project creation a prospective project lead will not only give a description of their project, but also specify the access permissions they want to request from members that decide to join a given project. These permissions may include: 
 \begin{description}
 \item [Username] By default projects do not get access to a members username, rather a random, unique identifier is created. This way members can join a project while being pseudonymous. 
-\item [Messaging] Decides whether a project lead gets the ability to send messages to a member. 
-\item [Data Access] A project can ask permission to read data that have been deposited into a member's account by other projects. A project leads needs to specify to which existing projects they want to have access to and only this data will be shared with the new project.
+\item [Data Access] A project will ask permission to read data that have been deposited into a member's account by other projects. A project leads needs to specify to which existing projects they want to have access to and only this data will be shared with the new project.
 \end{description}
 
-Through the permission system members get a clear idea of the amount of data they are sharing by joining a given project and whether their identity will be shared. Furthermore, new data can be deposited into the accounts of members that have joined a project. This makes them also central to getting data into a member account.
+Through the permission system members get a clear idea of the amount of data they are sharing by joining a given project and whether their username will be shared. Furthermore, new data can be deposited back into the accounts of members that have joined a project. This makes them also central to getting data into a member account. In addition to specifying the access permissions, projects also need to clearly signal whether they are a research study that has been approved by an Institutional Review Board (IRB) or whether they are a non-academic project.
 
 \textit{Projects} can be set up in two different ways: As an \textit{on-site project} or as an \textit{OAuth2 project}. While on-site projects do not need any additional resources on the side of the project, access to the data shared with it can not easily be automated and requires manual interactions.
 
 OAuth2 projects on the other hand require a larger effort to implement the \textit{OAuth2} authentication methods. In return they offer programmatic access to the shared data, making it well-suited for connecting to other web or smartphone applications.
 
-Given this very broad classification of a \textit{project}, they can cover anything from data import projects, over research projects, to quantified self tools which visualize and analyze a members data. 
+Given this very broad classification of a \textit{project}, they can cover anything from data import projects, over research projects, to quantified self tools which visualize and analyze a member's data. 
 
 \subsubsection{Members}
-Members interact with projects that are run on \textit{Open Humans}. By joining projects that deposit specific data into their accounts they can connect external services and e.g. put their genetic data or activity tracking data into their \textit{Open Humans} account. Once they have connected to relevant projects that import their own data, members can opt-in into joining further projects that want to get access to their personal data.
+Members interact with projects that are run on \textit{Open Humans}. By joining projects that act as data uploaders, they can upload specific data into their Open Humans accounts. This is a way to can connect external services: e.g. put their genetic data or activity tracking data into their \textit{Open Humans} account. Once they have connected to relevant projects that import their own data, members can opt-in into joining additional projects that want to get access to their account's data.
 
 As members are able to selectively join projects, they keep full control over how much of their data files they want to share and with which projects. 
 
-\subsubsection{Data}
-Data is uploaded into a members account projects. To be fully universal to all the possible projects that can be run on \textit{Open Humans}, all data is stored as files. For each file deposited into a members account, the uploading project needs to specify at least a description and tags as meta data. 
+\subsubsection{Data input and management}
+Data is uploaded into a member's account, which allows any joined projects with requisite permissions to access this data. To be fully universal to all the possible projects that can be run on \textit{Open Humans}, all data is stored as files. For any file that a project deposits in turn into a members account, the uploading project needs to specify at least a description and tags as meta data for the files. 
 
-Members can always review and access the data stored in their own accounts, but by default the data uploaded into their accounts is not shared with other projects but the one that deposited the data in their account. In addition to being able to share data with other projects, members can also opt-in into making the data of individual projects publicly available. Data that has been publicly shared is then discoverable on a member's user profile as well as through the \textit{Open Humans} Public Data API. 
+Members can always review and access the data stored in their own accounts. By default, the data uploaded into their accounts is not shared with any projects but the one that deposited the data in their account, until such other projects are joined and specifically authorized to access account data. In addition to being able to share data with other projects, members can also opt-in into making the data of individual projects publicly available. Data that has been publicly shared is then discoverable on a member's user profile as well as through the \textit{Open Humans} Public Data API. 
 
 \subsection{Open Humans in Practice}
 Using this design, a number of projects that import data into \textit{Open Humans} are provided directly by \textit{Open Humans}. Among data sources that can be imported and connected are \textit{23andMe}, \textit{AncestryDNA}, \textit{Fitbit}, \textit{Runkeeper}, \textit{Withings}, \textit{uBiome} and a generic \textit{VCF} importer for genetic data like whole exome or genome sequencing. Furthermore, as a special category the \textit{Data Selfie} project allows members to add additional data files that are not supported by a specialized project yet.
 
-The community around the \textit{Open Humans} platform has since started their own data import and connection projects, including a bridge to \textit{openSNP}, and importers for data from \textit{FamilyTreeDNA}, \textit{Apple Healthkit}, \textit{Gencove}, \textit{Twitter} and \textit{Nightscout} community. Across these data importers the platform supports data sources covering genetic and activity tracking data as well as data from glucose monitors and social media.
+The community around the \textit{Open Humans} platform has has expanded the support to additional data sources by writing their own data importers and data connections. These include a bridge to \textit{openSNP}, and importers for data from \textit{FamilyTreeDNA}, \textit{Apple Healthkit}, \textit{Gencove}, \textit{Twitter} and the \textit{Nightscout} (open source diabetes) community. Across these data importers the platform supports data sources covering genetic and activity tracking data as well as recorded GPS tracks, data from glucose monitors and social media.
 
-The platform has significantly grown since its launch in 2015: As of July 31st 2018, a total of 5,834 members have signed up with \textit{Open Humans} and have loaded 15,522 data sets into their accounts. Furthermore, overall there are 27 projects that are actively running on Open Humans, with an additional 10 projects that have already finished their data collection and have been concluded.
+The platform has significantly grown since its launch in 2015: As of August 6th 2018, a total of 5,842 members have signed up with \textit{Open Humans}. Of these, 2,316 members have loaded 15,555 data sets into their accounts. Furthermore, overall there are 27 projects that are actively running on Open Humans, with an additional 10 projects that have already finished data collection and thus have been concluded.
 
 \subsection{Use Cases}
 To demonstrate the range of projects made possible through the platform and how the community improves the ecosystem that is growing around \textit{Open Humans} we highlight some of the existing projects, covering both participant-lead as well as academic research and the quantified self community.
 
-\subsubsection{Personal Data Exploration}
-Explore data stored in OH in notebooks 
+\subsubsection{OpenAPS and Nightscout Data Commons}
+There are a variety of open source diabetes tools and applications that have been created to aid individuals with type 1 diabetes in managing and visualizing their diabetes data from disparate devices. One such tool is Nightscout. Another such example is OpenAPS, the Open Source Artificial Pancreas System, which enables individuals to utilize existing insulin pumps and continuous glucose monitors with off-the-shelf hardware and open source software as a hybrid closed loop "artificial pancreas" system. These platforms and tools enable real-time and retrospective data analysis of rich and complex diabetes data sets from the real world. 
+
+Traditionally, gathering this level of diabetes data would be time-consuming, expensive, and otherwise burdensome to the traditional researcher, and often a full barrier to researchers interested in getting started in the area of diabetes research and development. Using {Open Humans}, individuals from the diabetes community have created a data uploader tool {Nightscout Data Transfer Tool} to enable individuals to anonymously upload their diabetes data from Nightscout and/or OpenAPS. This enables an individual to protect their privacy, and also only upload data to one place while facilitating it's usage in multiple studies and projects. These two data commons have simple requirements for use, allowing any traditional *or* citizen science (e.g. patient) researcher who would like to utilize this data for research. These data commons were created with the goal of facilitating more access to diabetes data such as CGM datasets that are traditionally expensive to access, enabling more researchers to explore innovations for people with diabetes. Additionally, OpenAPS is the first open source artificial pancreas system with hundreds of users; there is benefit in openly sharing the data from users, who are hoping such data sharing will facilitate better tools and better innovations for academic and commercial innovations in this space. To date, dozens of researchers and many community members have accessed and utilized data from each of these commons. Some publications and presentations have also been completed, showcasing the work and the data donated by members of the community, and further allowing other researchers to build on this body of work and these data sets.
+
+In addition to facilitating easier access to more and richer diabetes data, this community has also been developing a series of open source tools to enable individuals to more easily work with the datasets. Many researchers are most comfortable with csv formatted data, whereas the diabetes data is uploaded as json files. Additionally, because of the plethora of devices and options of how and under what name data is uploaded, the json has an infinite range of possibilities for the structure of the schema. As a result, the open source toolset began to be developed to first enable easy conversation of the complex json into csv, and has been followed by additional tools with additional documentation to facilitate selecting data elements for further analysis out of the dataset.
+
+\subsubsection{Personal Data Exploration: Personal Data Notebooks \& Personal Data Exploratory}
+\textit{Open Humans} aggregates data from multiple sources for individual members. This makes it a natural starting point for a member to explore their personal data. To facilitate this, \textit{Open Humans} includes the \textit{Personal Data Notebooks} project. 
+
+Through a \textit{JupyterHub} setup (\url{https://jupyterhub.readthedocs.io}) that authenticates members through their \textit{Open Humans} accounts, members can write \textit{Jupyter Notebooks} \cite{Kluyver:2016aa} that get full access to their personal data in their web browser. This allows members to explore and analyze their own data without the need to download or install specialized analysis software on their own computers. Furthermore, it allows to easily analyze data across the various data sources, allowing to find correlations between them.
+
+As the notebooks themselves do not store any of the personal data, but rather the generic methods to access the data they can be easily shared between \textit{Open Humans} members without leaking a member's personal data. This property facilitates not only the sharing of analysis methods, but also reproducible \textit{n=1} experiments in the spirit of quantified self.
+
+To make these notebooks not only interoperable and re-usable, but also findable and accessible \cite{Wilkinson2016}, the sister project to the  \textit{Personal Data Notebooks} - the \textit{Personal Data Exploratory} -  was started. 
+Members can upload notebooks right from their \textit{Jupyter} instance to \textit{Open Humans} and can publish them on the \textit{Personal Data Exploratory} with just a few clicks. The \textit{Exploratory} publicly displays the published notebooks to the wider community and categories them according to the used data sources, tags and its content.
+
+The categorization allows other members to easily discover notebooks of interest. Notebooks written by other members can be launched and run on a member's own personal data through the \textit{Personal Data Notebook}, requiring only a single click of a button. This close interplay between the \textit{Personal Data Notebook} project and the \textit{Personal Data Exploratory} project thus offers a fully integrated personal data analysis environment in which personal data can be disseminated in a secure way, while growing a library of publicly data analysis tools.
+
+\subsubsection{Connecting an existing, open database: openSNP}
+\textit{openSNP} is an open database for personal genomics data which allows individuals to donate the raw DTC genetic test data into the public domain \cite{Greshake2014}. So far, over 4,500 genetic data sets have been donated, making it one of the largest crowdsourced genome databases. While people can annotate their genomes with additional phenotypes on \textit{openSNP}, there is no integration of further data sources into \textit{openSNP}. To further enrich a member's account on both \textit{Open Humans} and \textit{openSNP}, a project that connects the two was started.
+
+The \textit{openSNP} project for \textit{Open Humans} asks members for permission to read their \textit{Open Humans} username during the authentication phase. By publicly recording a members \textit{Open Humans} username, it is then possible to link the public data sets on \textit{Open Humans} to a given \textit{openSNP member}. Additionally, \textit{openSNP} also deposits a link to a member's public \textit{openSNP} data sets in their \textit{Open Humans} member account. Through this other \textit{Open Humans} projects can ask individuals to get access to their genetic data and phenotypes stored on \textit{openSNP}.
+
+
+\subsubsection{Your project here?}
+Add your own open humans project!
 
 \section{Discussion}
+Citizen science and participatory science are a growing field that engages more and more people in the scientific process. But while participatory science keeps growing quickly in the biosciences and astronomy, its development in the humanities, social sciences and medical research lags behind \cite{Kullenberg2016}, despite promises for those fields \cite{Rowbotham2017}. 
 
 \begin{itemize}
+    \item Dana wants to come back and make note of some of the benefits of using OH for citizen science research to address some of the push back of traditional academics, and also highlight how the OH design for anonymity often supersedes the privacy of how a traditional study would be designed.
     \item How does OH solve the issues presented in the intro? relate to how individual use case examples do it
     \item what are the limitations? (who participates? how many ppl are actually having enough data to merge data streams from different sources? how to keep up API connections?) 
     \item Future outlook: what'll need to be solved going on from here? (e.g. community ownership through project approvals, board seats? governance at large?) 
@@ -160,12 +205,12 @@ Explore data stored in OH in notebooks
 
 \section{Methods}
 
-We developed the \textit{Open Humans} web application using \textit{Python} and \textit{Django}. A \textit{PostgreSQL} database serves as the main storage back end for the data relating to members and projects. As a file storage for the personal data deposited into member accounts we use \textit{Amazon S3}. 
+We developed the \textit{Open Humans} web platform using \textit{Python} and \textit{Django}. A \textit{PostgreSQL} database serves as the main storage back end for the data relating to members and projects. As a file storage for the personal data deposited into member accounts we use \textit{Amazon S3}. 
 
 \subsection{API interface}
 
 
-\section{Availability of source code and requirements (optional, if code is present)}
+\section{Availability of source code and requirements}
 
 Lists the following:
 \begin{itemize}
@@ -203,7 +248,8 @@ Not applicable
 
 \subsection{Competing Interests}
 
-BGT and MPB are employees of the \textit{Open Humans Foundation} that runs \textit{Open Humans}.
+BGT is supported by a fellowship from \textit{Open Humans Foundation}, which operates \textit{Open Humans}.
+MPB is independently funded for full time work at \textit{Open Humans Foundation} as Executive Director and President.
 
 
 \subsection{Funding}
@@ -217,6 +263,7 @@ The individual contributions of authors to the manuscript should be specified in
 
 
 \section{Acknowledgements}
+The authors would like to thank all contributors and members of the Open Humans community for their input in developing the process and platforms for Open Humans, as well as for openly sharing their data and advancing our public knowledge sources.
 
 Please acknowledge anyone who contributed towards the article who does not meet the criteria for authorship including anyone who provided professional writing services or materials.
 
