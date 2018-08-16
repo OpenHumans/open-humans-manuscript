@@ -78,13 +78,13 @@ Personal Data; Crowdsourcing; Citizen Science; Database; Open Data
 
 \section{Background}
 \label{sec:background}
-Human subject research at large, from biomedical \& health research to the social sciences, are experiencing rapid changes. The rise of electronic records, online platforms and increasingly wearable devices contributes to a sense that these collected data can change how research in these fields is performed \cite{McCormick2015, zdemir2015, Athey2017, Cappella2017}
+Human subject research at large, from biomedical \& health research to the social sciences, is experiencing rapid changes. The rise of electronic records, online platforms and increasingly wearable devices contributes to a sense that these collected data can change how research in these fields is performed \cite{McCormick2015, zdemir2015, Athey2017, Cappella2017}
 
 Among the impacted disciplines is personalized medicine - which takes behavioral, environmental and genetic factors into account and has become the vision for health-care in the United States \cite{Collins2015}. By taking these parameters into account, personalized medicine mains to optimize health-outcomes for individual patients, for example by matching drugs to a patient's genetic makeup \cite{Chhibber2014, Kummar2015}.
 
 Access to large-scale data sets, along with an availability of appropriate methods to analyze these data \cite{Dilsizian2013, Moon2007}, is often described as one big driver for the success of personalized medicine \cite{Kohane2015}. Dropping costs for large-scale, personalized analyses such as whole-genome sequencing \cite{wetterstrand} help facilitate both research of personalized medicine and its adoption. In addition, an increasing number of patients and healthy individuals are collecting health-related data outside traditional healthcare, for example through wearable devices \cite{Swan2009} that produce data useful for research \cite{Gay2015} or through direct-to-consumer (DTC) genetic testing \cite{Corpas2015}.
 
-Indeed, already over 7 million individuals have taken a DTC genetic test \cite{growthancestry} and it is estimated that by 2020 over 2,314 exabytes of storage will be needed for health care data \cite{emc} alone. Furthermore, data from social network sites like Facebook or Twitter are becoming more and more interesting for medical data mining \cite{Rozenblum2013}. Additionally, more data is becoming available from personal medical devices, both in real-time and for retrospective analysis. 
+Indeed, an estimated 12-17 million individuals have taken a DTC genetic test \cite{growthancestry, growthancestry2} and it is estimated that by 2020 over 2,314 exabytes of storage will be needed for health care data \cite{emc} alone. Furthermore, data from social network sites like Facebook or Twitter are becoming more and more interesting for medical data mining \cite{Rozenblum2013}. Additionally, more data is becoming available from personal medical devices, both in real-time and for retrospective analysis. 
 
 These changes to research and medical practice bring with them a number of challenges that need to be solved, including the problems of data silos, ethical data sharing and participant-involvement.
 
@@ -94,7 +94,7 @@ To fully realize the promises of these large personal data collections, not only
 Furthermore, in case of wearable devices, social media and other data held by companies, data exports are not offered for commercial reasons. In the European Union, the issue of data portability has been addressed by the \emph{General Data Protection Regulation} (GDPR), which strengthens an individuals right to obtain copies of all of their data \cite{DeHert2018}. An individual's right to copies of their data, empowers them to be a key data holder for personalized medicine frameworks. 
 
 \subsection{Ethical Data Re-Use}
-While the sharing and re-using of biomedical data offers can potentially transform medical care and medical research, it brings along a number of ethical considerations \cite{Mason2017, Ross2018}. In the field of human genetics, the ethics of sharing data has extensive been evaluated with respects to how research participants and patients can give informed consent with respects to genetic discrimination, loss of privacy and the risks of re-identification in publicly shared data \cite{Haeusermann2017, Wang2016}.
+While the sharing and re-using of biomedical data offers can potentially transform medical care and medical research, it brings along a number of ethical considerations \cite{Mason2017, Ross2018}. In the field of human genetics, the ethics of sharing data has been extensively evaluated with respect to how research participants and patients can give informed consent with respects to genetic discrimination, loss of privacy and the risks of re-identification in publicly shared data \cite{Haeusermann2017, Wang2016}.
 
 Furthermore, as social media websites are gaining importance in research as well as public health \cite{Samerski2018}, ethical data usage considerations are gaining importance. An extreme example of ethical problems  can be seen in a "study" performed on 70,000 users of the online dating website which subsequently publicly shared the personal data of these users \cite{okcupid}. Such cases has lead to lively debate about the ethics of using data which is publicly available on websites as Facebook \cite{Zimmer2010, Zook2017}. 
 
@@ -159,7 +159,41 @@ Using this design, a number of projects that import data into \textit{Open Human
 
 The community around the \textit{Open Humans} platform has has expanded the support to additional data sources by writing their own data importers and data connections. These include a bridge to \textit{openSNP}, and importers for data from \textit{FamilyTreeDNA}, \textit{Apple Healthkit}, \textit{Gencove}, \textit{Twitter} and the \textit{Nightscout} (open source diabetes) community. Across these data importers the platform supports data sources covering genetic and activity tracking data as well as recorded GPS tracks, data from glucose monitors and social media.
 
-The platform has significantly grown since its launch in 2015: As of August 6th 2018, a total of 5,842 members have signed up with \textit{Open Humans}. Of these, 2,316 members have loaded 15,555 data sets into their accounts. Furthermore, overall there are 27 projects that are actively running on Open Humans, with an additional 10 projects that have already finished data collection and thus have been concluded.
+The platform has significantly grown since its launch in 2015: As of August 6th 2018, a total of 5,842 members have signed up with \textit{Open Humans}. Of these, 2,316 members have loaded 15,555 data sets into their accounts. Furthermore, overall there are 27 projects that are actively running on Open Humans, with an additional 10 projects that have already finished data collection and thus have been concluded (see Table \ref{tab:projects} for the most used projects).
+
+\begin{table*}[bt!]
+\caption{\textit{Open Humans} projects with more than 200 members}\label{tab:projects}
+% Use "S" column identifier (from siunitx) to align on decimal point.
+% Use "L", "R" or "C" column identifier for auto-wrapping columns with tabularx.
+\begin{tabularx}{\linewidth}{L L C C C}
+\toprule
+{Project name} & {Description} & {Members} & {Data deposited} & {Data access requested} \\
+\midrule
+23andMe Upload  & Enables members to import their 23andMe data & 1011 & 23andMe data & - \\
+Harvard Personal Genome Project  & Enables members to import their data from the Personal Genome Project & 816 & Full genome sequencing data \& survey data & - \\
+Genevieve Genome Report  & Matches a member's genome against public variant data, and invites them to contribute to shared notes.
+ & 701 & - & 23andMe Upload, Harvard PGP, Genome/Exome Upload \\
+Keeping Pace  & Seeks to study data about how we move around, to understand how seasons and local environment influence our movement patterns.
+ & 380 & - & Fitbit, Jawbone, Moves, Apple HealthKit, Runkeeper \\
+AncestryDNA Upload  & Enables members to import their AncestryDNA data & 355 & AncestyDNA data & - \\
+Fitbit Connection  & Connect a member's Fitbit account to add data from their Fitbit activity trackers and other Fitbit devices. & 347 & Data from a Fitbit account & - \\
+GenomiX Genome Exploration  & A study of how people interact with their genome data using GenomiX, a visualization tool & 313 & - & - \\
+Circles  & A research study that aims to discover the genetic basis for a mysterious and remarkable human trait: the areola. & 300 & - & 23andMe, AncestryDNA, Data Selfies, Harvard PGP, Genome/Exome Upload \\
+Twitter Archive Analyzer  & Enables members to import their Twitter archives and analyzes them & 289 & Twitter archives & - \\
+Personal Data Notebooks & Enables personal data analyses with Jupyter Notebooks & 284 & Jupyter Notebooks & - \\
+openSNP  & Enables members to connect their \textit{Open Humans} and \textit{openSNP} accounts & 232 & openSNP user details & - \\
+Nightscout Data Transfer  & A tool to easily enable the upload of data from individual Nightscout databases
+ & 211 & Nightscout data & - \\
+Runkeeper  & Imports a member's data from Runkeeper
+ & 206 & Runkeeper data & - \\
+
+\bottomrule
+\end{tabularx}
+
+\begin{tablenotes}
+\item Data was collected on 2018-08-15
+\end{tablenotes}
+\end{table*}
 
 \subsection{Use Cases}
 To demonstrate the range of projects made possible through the platform and how the community improves the ecosystem that is growing around \textit{Open Humans} we highlight some of the existing projects, covering both participant-lead as well as academic research and the quantified self community.
@@ -193,10 +227,29 @@ The \textit{openSNP} project for \textit{Open Humans} asks members for permissio
 Add your own open humans project!
 
 \section{Discussion}
-Citizen science and participatory science are a growing field that engages more and more people in the scientific process. But while participatory science keeps growing quickly in the biosciences and astronomy, its development in the humanities, social sciences and medical research lags behind \cite{Kullenberg2016}, despite promises for those fields \cite{Rowbotham2017}. 
+Citizen science and participatory science are a growing field that engages more and more people in the scientific process. But while participatory science keeps growing quickly in the biosciences and astronomy, its development in the humanities, social sciences and medical research lags behind \cite{Kullenberg2016}, despite promises for those fields \cite{Rowbotham2017,communityresearch}. Both, barriers in accessing personal data that is stored in commercial entities as well as legitimate ethical concerns that surround the use of personal data contribute to this slower adoption \cite{Ross2018, Wang2016}.
+\textit{Open Humans} was designed to address these many of these issues. 
 
+\subsection{Granular Consent}
+One often suggested way to solve or minimize the ethical concerns around the sharing of personal data in a research framework are granular privacy controls and granular consent \cite{Evans2017}. In a medical context, most patients prefer to have a granular control over which medical data to share and for which purposes \cite{Grando2017}, especially in the context of electronic medical records \cite{Caine2013}. Furthermore, the GDPR requires data controllers to give the individual granular consent options for how their data is used \cite{Nati2018}.
+
+\textit{Open Humans} implements a granular consent and privacy model through the use of projects that members can opt-in to. On a technical level, projects need to select the data sources they would like to access, and members are shown the requested permissions during the authentication step.
+Additionally, projects on \textit{Open Humans} need to adhere to the community guidelines. Among other things these guidelines require projects to inform prospective participants about the level of data access they request, how the data will be used and what privacy \& security precautions they have in place. As joining any project is optional, members retain full control over which data to share and with whom.
+
+\subsection{Data portability}
+Much of health data is still stored in different data silos, divided by diseases, institutions and countries \cite{ga4gh2016}. On an individual level, the situation is not much better: While medical data is stored in electronic records, much of a persons data is now stored behind the walls of tech companies that run social media platforms, develop smartphone apps or wearable devices \cite{Althoff2017}. This fragmentation - especially when coupled with a lack of data export methods - prevents individuals to fully make use of their own data. 
+
+Personal information management systems (PIMS) can be designed to help individuals in re-collecting and integrating their personal data from different sources \cite{Allard2017}. The right to data portability encapsulated in the GDPR has the potential to boost the adoption of such systems, as it guarantees individuals a right to export their personal data in electronic and useful formats. Furthermore, both medical research \cite{Rumbold2017} as well as citizen science \cite{Quinn2018} have the potential to profit from these data. By design, \textit{Open Humans} works similar to a PIMS, as it allows individuals to bundle and collect their personal data from external sources. Like other PIMS, \textit{Open Humans} will profit from the increase of data export functions that third-data parties will implement due to the GDPR. 
+
+While the availability of data export functions is a necessary condition for making PIMS work, it alone is not sufficient. PIMS need to support the data import on their end, either by supporting the file types or by offering support for the application programming interfaces (APIs) of the external services. As file formats and APIs are not static but can change over time, especially in case of popular services \cite{Xavier2017}, a significant amount of effort is needed to keep data import functions into PIMS up to date. This cost keeps accumulating and increasing as the number of supported data imports keeps increasing. The modular, project-based nature of \textit{Open Humans} allows to distribute the workload of keeping integrations up to date, as data importers can be provided by any third party. Existing data imports on \textit{Open Humans} already demonstrate this capability: Both the \textit{Nightscout} as well as the \textit{Apple HealthKit} data importer are examples of this. In case of \textit{Nightscout}, members of the diabetes community themselves built and maintain the data import into \textit{Open Humans} to power their own data commons that overlays the \textit{Open Humans} data storage. The \textit{HealthKit} import application was written by an individual \textit{Open Humans} member who wanted to add support for adding their own data. 
+
+\subsection{Enabling individual-centric research \& citizen science}
 \begin{itemize}
     \item Dana wants to come back and make note of some of the benefits of using OH for citizen science research to address some of the push back of traditional academics, and also highlight how the OH design for anonymity often supersedes the privacy of how a traditional study would be designed.
+\end{itemize}
+
+\subsection{[NOTES]}
+\begin{itemize}
     \item How does OH solve the issues presented in the intro? relate to how individual use case examples do it
     \item what are the limitations? (who participates? how many ppl are actually having enough data to merge data streams from different sources? how to keep up API connections?) 
     \item Future outlook: what'll need to be solved going on from here? (e.g. community ownership through project approvals, board seats? governance at large?) 
